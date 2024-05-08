@@ -1,15 +1,17 @@
 @import url(variables.css);
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+25&family=Orbitron:wght@400..900&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 
-    font-family: "Roboto-Regular";
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
-    background: linear-gradient(var(--color--one), var(--color--one--rgba));
+    background: url(https://www.xtrafondos.com/wallpapers/iiustracion-viaje-espacial-12141.jpg);
+    background-size: cover;
 }
 
 *::-webkit-scrollbar {
@@ -32,16 +34,34 @@ body {
     background-color: var(--color--one--rgba);
 }
 
-.header__title {
-    /* background: red; */
-    color: var(--color--five);
-    height: 10vh;
-    font-size: 2.3rem;
+.header{
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
 }
+.header__title {
+   font-family: "Orbitron", sans-serif;
+   color: var(--color--five);
+   height: 10vh;
+   font-size: 2.3rem;
+   display: flex;
+   align-self: center;
+   justify-content: center;
+   align-items: center;
+   text-transform: uppercase;
+   width: 30rem;
+   
+}
+
+.header__title {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 0px #6f00ff, 0 0 0px #6f00ff, 0 0 30px #6f00ff, 0 0 3px #6f00ff;
+    outline: 2px solid #6f00ff;
+    outline-offset: -10px; /* Este valor puede ajustarse según tus necesidades */
+
+
+    
+   }
 .load{
     background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);
     background-size: 200% 100%;
@@ -66,13 +86,20 @@ body {
 
 .nav__description {
     /* background: red; */
+    background-color: #1d1f3896;
+    padding: 20px;
+    border-radius: 20px;
+    border-color: white
+    ;
+    margin-bottom: 4rem;
     grid-area: nav__1;
+  
 }
 
 .description__item {
     /* background: blue; */
     overflow-y: auto;
-    height: 75vh;
+    height: 70vh;
 }
 
 .description__buttom {
@@ -80,7 +107,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110px;
+
+
 }
 
 .description__container {
@@ -91,15 +119,62 @@ body {
     margin-bottom: 25px;
 }
 
-.description__container div:last-child h3 {
-    color: var(--color--five);
+.icono_pais, .icono_dinero, .icono_fecha, .icono_wiki{
+    
+      
+    width: 40px;
+    height: 40px;
+
 }
+.img_wiki{
+    width: 30px;
+  
+  
+    height: 30px;
+}
+.estados_unidos{
+    width: 180px;
+    height: 120px;
+    
+    padding-top: 1rem;
+ 
+
+    
+}
+
+.description__container a{
+ 
+    display: flex;
+     font-size: larger;
+  ;
+    align-items: center;
+    
+
+ 
+    
+}
+.description__container div:last-child h3, h4 {
+    color: var(--color--five);
+    padding-bottom: 10px;
+;
+    /* background-color: violet; */
+}
+.description__container div:last-child h3{
+    
+    padding-bottom: 10px;
+    padding-top: 0.6rem;
+  
+
+}
+
 
 .description__container div:last-child small,
 .description__container div:last-child a {
     margin-top: 25px;
     color: var(--color--two);
     text-decoration: none;
+  
+      /* background-color: violet; */
 }
 
 .main__section {
@@ -126,9 +201,11 @@ body {
 
 .section__information__1>.carousel__item {
     /* flex: 1; */
-    min-width: 24%;
+    min-width: 20%;
     /* background-color: purple; */
     display: flex;
+    background-color: #091224a4;
+    border-radius: 800px;
     justify-content: center;
     align-items: center;
 }
@@ -158,9 +235,11 @@ body {
 }
 /*  */
 .section__information__container {
-    /* background: #d9ff00; */
+   
     grid-area: section__main;
     display: grid;
+    border-radius: 20px;
+    
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
         "colum__1 colum__2 colum__3";
@@ -168,6 +247,8 @@ body {
 
 .section__information__2 {
     /* background: blue; */
+    /* background: #091224a4; 
+    border-radius: 20px; */
     grid-area: colum__1;
     display: grid;
     grid-template-rows: 1fr 1.3fr;
@@ -177,12 +258,12 @@ body {
 }
 
 .section__information__2 div:first-child {
-    /* background: #d9ff00; */
+   
     grid-area: carusel__colum__1;
+    
     display: flex;
     overflow-x: auto;
-    gap: 10px;
-    justify-content: space-evenly;
+
 }
 
 .section__information__2 div:first-child>.carousel__item {
@@ -197,10 +278,13 @@ body {
 .information__table__1 {
     width: 85%;
     margin: 10px auto;
-    /* background: darkblue; */
+   background-color: #091224a4;
+    padding-top: 30px;
+    border-radius: 30px;
     grid-area: table__colum__1;
 }
 .information__table__1 h3{
+
     text-transform: uppercase;
     padding: 0 25px;
     margin-bottom: 5px;
@@ -243,11 +327,14 @@ body {
 
 }
 
+
 .section__image>.carousel__item img {
-    width: 305px;
-    height: 190px;
+    width: 385px;
+    margin-top: 170px;
+    height: 250px;
     border-radius: 10px;
     object-fit: cover;
+    
     box-shadow: 0px 0px 10px var(--color--one);
 }
 
@@ -281,6 +368,9 @@ body {
 .information__table__2 {
     width: 85%;
     margin: 10px auto;
+    background-color: #091224a4;
+    padding-top: 30px;
+    border-radius: 30px;
     /* background: darkblue; */
     grid-area: table__colum__2;
 }
@@ -324,14 +414,26 @@ body {
 
 .footer ul {
     grid-area: footer__menu;
-    background: var(--color--one);
+    background-color: #091224;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+  border-radius: 40px;
+  border-color: white;
+  list-style-type: none;
+
+    /* border-top-left-radius: 50px;
+    border-top-right-radius: 40px; */
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border: 2px solid transparent;
+    border-radius: 40px;
+    box-shadow: 0 0 7px #6f00ff, 0 0 10px #6f00ff, 0 0 5px #6f00ff, 0 0 80px #6f00ff;
+    outline: 1px solid #6f00ff;
+
 }
-.footer ul::after{
+/* .footer ul::after{
     content: "";
     position: relative;
     margin-top: 10px;
@@ -355,9 +457,10 @@ body {
     border-right: 0px solid transparent;
     border-bottom: 70px solid  var(--color--one);
     /* border-top-right-radius: 30px; */
-}
+
 .footer ul li {
     list-style: none;
+   
 }
 
 .footer ul li a {
@@ -373,7 +476,21 @@ body {
 }
 .nav__information {
     /* background: red; */
-    grid-area: nav__2;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.nav__information{
+    background-color: #0912249a;
+
+    border-radius: 40px;
+ 
+
+
 }
 
 .information__item {
